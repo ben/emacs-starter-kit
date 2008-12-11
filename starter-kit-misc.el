@@ -74,6 +74,10 @@
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat dotfiles-dir "backups")))))
 
+;; Move M-x customize output out of init.el
+(setq custom-file (expand-file-name "~/.emacs.d/customized.el"))
+(load custom-file 'noerror)
+
 ;; nxhtml stuff
 (setq mumamo-chunk-coloring 'submode-colored
       nxhtml-skip-welcome t
