@@ -21,10 +21,11 @@
 (c-add-style "wacom" wacom-c-style)
 
 ;; Modified regex for msbuild errors with spaces in the file name
-(add-to-list
- 'compilation-error-regexp-alist-alist
- '(msft "^ *\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(]+\\)(\\([0-9]+\\)): \\(?:[a-zA-Z ]*error\\|warnin\\(g\\)\\) C[0-9]+:" 2 3 nil
-        (4)))
+(if (listp 'compilation-error-regexp-alist-alist)
+    (add-to-list
+     'compilation-error-regexp-alist-alist
+     '(msft "^ *\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(]+\\)(\\([0-9]+\\)): \\(?:[a-zA-Z ]*error\\|warnin\\(g\\)\\) C[0-9]+:" 2 3 nil
+            (4))))
 
 ;; Aesthetics
 (when (eq window-system 'w32) 
