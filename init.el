@@ -17,6 +17,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
+(setq custom-file (concat dotfiles-dir "custom.el"))
 
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session:
@@ -35,15 +36,17 @@
 
 ;; Load up starter kit customizations:
 
-(require 'starter-kit-lisp)
 (require 'starter-kit-defuns)
 (require 'starter-kit-bindings)
 (require 'starter-kit-misc)
 (require 'starter-kit-registers)
 (require 'starter-kit-eshell)
+(require 'starter-kit-lisp)
 (require 'starter-kit-ruby)
+(require 'starter-kit-js)
 
 (regen-autoloads)
+(load custom-file 'noerror)
 
 (require 'bs-init)
 
