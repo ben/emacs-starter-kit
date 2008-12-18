@@ -28,6 +28,7 @@
             (4))))
 
 ;; Aesthetics
+(scroll-bar-mode nil)
 (when (eq window-system 'w32) 
   (add-to-list 'default-frame-alist
         '(font . "-outline-Consolas-normal-r-normal-normal-12-82-96-96-c-*-iso8859-1")))
