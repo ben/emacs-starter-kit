@@ -28,12 +28,29 @@
             (4))))
 
 ;; Aesthetics
+
 (when (eq window-system 'w32) 
   (add-to-list 'default-frame-alist
         '(font . "-outline-Consolas-normal-r-normal-normal-12-82-96-96-c-*-iso8859-1")))
-(when (eq window-system 'mac) 
-  (add-to-list 'default-frame-alist
-        '(font . "-*-andale mono-medium-r-*--12-*-*-*-*-*-mac-roman")))
+(when (and (not (featurep 'aquamacs)) (eq window-system 'mac))
+  (progn
+    (add-to-list 'default-frame-alist
+                 '(font . "-*-andale mono-medium-r-*--10-*-*-*-*-*-mac-roman"))))
+
+(when (featurep 'aquamacs)
+  (progn
+    (add-to-list 'default-frame-alist
+                 '(alpha . (95 70)))
+    (define-key global-map [(alt return)] 'mac-toggle-max-window)
+    (defun mac-toggle-max-window ()
+      "WriteRoom mode; fully opaque, no dock or menubar."
+      (interactive)
+      (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+                                               nil
+                                             'fullboth))
+      (set-frame-parameter nil 'alpha (if (frame-parameter nil 'fullscreen)
+                                          '(100 100)
+                                        '(95 70))))))
 (zenburn)
 
 (provide 'bs-init)
