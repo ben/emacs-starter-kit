@@ -72,3 +72,5 @@
 ;;; init.el ends here
 
 (require 'bs-init)
+
+(put 'set-goal-column 'disabled nil)

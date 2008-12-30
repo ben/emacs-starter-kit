@@ -13,6 +13,8 @@
  '(highlight-80+-columns 100)
  '(indent-tabs-mode nil)
  '(midnight-mode t nil (midnight))
+ '(mouse-wheel-progressive-speed nil)
+ '(mouse-wheel-scroll-amount (quote (3 ((shift) . 10) ((control)))))
  '(perl-continued-brace-offset -3)
  '(perl-continued-statement-offset 3)
  '(perl-indent-level 3)
