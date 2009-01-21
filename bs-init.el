@@ -31,6 +31,12 @@
      '(msft "^ *\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(]+\\)(\\([0-9]+\\)): \\(?:[a-zA-Z ]*error\\|warnin\\(g\\)\\) C[0-9]+:" 2 3 nil
             (4))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Translation databases
+(add-to-list 'auto-mode-alist '("\\.utf8$" . wacom-translation-database-mode))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Aesthetics
 (scroll-bar-mode nil)
 (when (eq window-system 'w32)
@@ -60,5 +66,9 @@
                                         '(95 70))))))
 (require 'color-theme)
 (color-theme-blackboard)
+
+;; Revert-buffer shortcut
+(defun bs-revert-buffer () (interactive) (revert-buffer t t))
+(global-set-key [C-f12] 'bs-revert-buffer)
 
 (provide 'bs-init)
