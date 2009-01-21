@@ -57,4 +57,13 @@
 (require 'color-theme)
 (color-theme-blackboard)
 
+;; AucTeX init
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(require 'tex-mik)
+(eval-after-load 'info
+  '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+
 (provide 'bs-init)
