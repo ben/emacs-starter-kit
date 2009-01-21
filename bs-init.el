@@ -71,4 +71,14 @@
 (defun bs-revert-buffer () (interactive) (revert-buffer t t))
 (global-set-key [C-f12] 'bs-revert-buffer)
 
+;; AucTeX init
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(require 'tex-mik)
+(eval-after-load 'info
+  '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+
+
 (provide 'bs-init)
