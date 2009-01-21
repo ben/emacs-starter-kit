@@ -1,6 +1,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; C++ stuff
 
+;; map .h to C++ mode
+(add-to-list 'auto-mode-alist
+             '("\\.h$" . c++-mode))
+
 ;; Wacom styleguide-compliant indentation
 (defconst wacom-c-style
   '((c-basic-offset . 3)
