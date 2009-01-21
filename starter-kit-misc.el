@@ -30,7 +30,7 @@
       xterm-mouse-mode t
       save-place-file (concat dotfiles-dir "places"))
 
-;; Set this to whatever browser you use:
+;; Set this to whatever browser you use
 (setq browse-url-browser-function 'browse-url-firefox)
 ;; (setq browse-url-browser-function 'browse-default-macosx-browser)
 ;; (setq browse-url-browser-function 'browse-default-windows-browser)
@@ -67,6 +67,12 @@
 (set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
+
+(add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'textile-mode-hook 'auto-fill-mode)
+(add-hook 'textile-mode-hook 'flyspell-mode)
+
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (random t) ;; Seed the random-number generator

@@ -24,6 +24,7 @@ screencast](http://peepcode.com/products/meet-emacs) helpful. The
    Otherwise, Mac users should get it [from Apple](http://www.apple.com/downloads/macosx/unix_open_source/carbonemacspackage.html).
    Windows users can get it [from GNU](http://ftp.gnu.org/gnu/emacs/windows/emacs-22.3-bin-i386.zip).
 2. Move the directory containing this file to ~/.emacs.d
+   (If you already have a directory at ~/.emacs.d move it out of the way and put this there instead.)
 3. Launch Emacs!
 
 If you are missing some autoloads after an update (should manifest
@@ -33,6 +34,10 @@ If you want to keep your regular ~/.emacs.d in place and just launch a
 single instance using the starter kit, try the following invocation:
 
   $ emacs -q -l ~/src/emacs-starter-kit/init.el
+
+Note that having a ~/.emacs file might override the starter kit
+loading, so if you've having trouble loading it, make sure that file
+is not present.
 
 ## Structure
 
@@ -59,7 +64,7 @@ where you should put code that you don't think would be useful to
 everyone. That will allow you to merge with newer versions of the
 starter-kit without conflicts.
 
-## ELPA
+## Emacs Lisp Package Archive
 
 Libraries from [ELPA](http://tromey.com/elpa) are preferred when
 available since dependencies are handled automatically, and the burden
@@ -84,5 +89,8 @@ it. Take a look at what happens in init.el to get started.
 
 Also: see the file TODO. Helping submit new libraries to ELPA is the
 easiest way to help out. Grep the project for TODO for other things.
+
+Files are licensed under the same license as Emacs unless otherwise
+specified. See the file COPYING for details.
 
 The latest version is at http://github.com/technomancy/emacs-starter-kit/
