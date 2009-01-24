@@ -5,6 +5,14 @@
 (add-to-list 'auto-mode-alist
              '("\\.h$" . c++-mode))
 
+;; C-c C-m -> compile
+(defun compile-using-default-cmd ()
+  (interactive)
+  (compile compile-command))
+(defun my-c-mode-common-hook ()
+  (define-key c++-mode-map (kbd "C-c C-m") 'compile-using-default-cmd))
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
 ;; Wacom styleguide-compliant indentation
 (defconst wacom-c-style
   '((c-basic-offset . 3)
