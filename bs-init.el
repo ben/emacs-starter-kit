@@ -40,9 +40,10 @@
             (4))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Auto-mode entries
 ;; Translation databases
 (add-to-list 'auto-mode-alist '("\\.utf8$" . wacom-translation-database-mode))
-
+(add-to-list 'auto-mode-alist '("\\.dat$" . dat-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Aesthetics
