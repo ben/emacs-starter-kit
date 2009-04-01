@@ -53,7 +53,7 @@
     (add-to-list 'default-frame-alist
                  '(font . "-outline-Consolas-normal-r-normal-normal-12-82-96-96-c-*-iso8859-1"))
     (add-to-list 'default-frame-alist
-                 '(alpha . (90 70)))))
+                 '(alpha . (95 90)))))
 (when (and (not (featurep 'aquamacs)) (eq window-system 'mac))
   (progn
     (add-to-list 'default-frame-alist
@@ -62,7 +62,7 @@
 (when (featurep 'aquamacs)
   (progn
     (add-to-list 'default-frame-alist
-                 '(alpha . (95 70)))
+                 '(alpha . (95 90)))
     (define-key global-map [(alt return)] 'mac-toggle-max-window)
     (defun mac-toggle-max-window ()
       "WriteRoom mode; fully opaque, no dock or menubar."
@@ -72,7 +72,7 @@
                                              'fullboth))
       (set-frame-parameter nil 'alpha (if (frame-parameter nil 'fullscreen)
                                           '(100 100)
-                                        '(95 70))))))
+                                        '(95 90))))))
 (require 'color-theme)
 (color-theme-blackboard)
 
