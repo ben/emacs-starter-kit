@@ -73,21 +73,27 @@
       (set-frame-parameter nil 'alpha (if (frame-parameter nil 'fullscreen)
                                           '(100 100)
                                         '(95 90))))))
+
+
+;;; Colors. Blackboard is unusable in a putty window.
 (require 'color-theme)
-(color-theme-blackboard)
+(if (display-graphic-p)
+    (color-theme-blackboard)
+  (color-theme-zenburn))
 
 ;; Revert-buffer shortcut
 (defun bs-revert-buffer () (interactive) (revert-buffer t t))
 (global-set-key [C-f12] 'bs-revert-buffer)
 
 ;; AucTeX init
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
-(require 'tex-mik)
-(eval-after-load 'info
-  '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
+(if (load "auctex.el" t t t)
+    (progn
+      (load "preview-latex.el" nil t t)
+      (require 'tex-mik)
+      (eval-after-load 'info
+        '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
+      (setq TeX-auto-save t)
+      (setq TeX-parse-self t)))p
 
 
 (provide 'bs-init)
