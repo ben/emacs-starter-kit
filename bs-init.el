@@ -93,7 +93,7 @@
       (eval-after-load 'info
         '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
       (setq TeX-auto-save t)
-      (setq TeX-parse-self t)))p
+      (setq TeX-parse-self t)))
 
 
 (provide 'bs-init)
