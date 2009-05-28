@@ -51,7 +51,7 @@
 (when (eq window-system 'w32)
   (progn
     (add-to-list 'default-frame-alist
-                 '(font . "-outline-Consolas-normal-r-normal-normal-12-82-96-96-c-*-iso8859-1"))
+                 '(font . "-outline-Consolas-normal-r-normal-normal-14-82-96-96-c-*-iso8859-1"))
     (add-to-list 'default-frame-alist
                  '(alpha . (95 90)))))
 (when (and (not (featurep 'aquamacs)) (eq window-system 'mac))
