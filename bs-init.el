@@ -44,6 +44,7 @@
 ;; Translation databases
 (add-to-list 'auto-mode-alist '("\\.utf8$" . wacom-translation-database-mode))
 (add-to-list 'auto-mode-alist '("\\.dat$" . dat-mode))
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Aesthetics
@@ -56,8 +57,15 @@
                  '(alpha . (95 90)))))
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mac Emacs doesn't auto-start server-mode
+(when (eq window-system 'mac)
+  (server-start))
 
-;;; Colors. Blackboard is unusable in a putty window.
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Colors. Blackboard is unusable in a putty window.
 (require 'color-theme)
 (if (display-graphic-p)
     (color-theme-blackboard)
@@ -76,6 +84,15 @@
         '(add-to-list 'Info-directory-list "c:/Program Files/Emacs/share/info"))
       (setq TeX-auto-save t)
       (setq TeX-parse-self t)))
+
+
+;; Fullscreen, only works on OSX
+(defun mac-toggle-max-window ()
+  (interactive)
+  (set-frame-parameter nil 'fullscreen
+                       (if (frame-parameter nil 'fullscreen)
+                           nil
+                         'fullboth)))
 
 
 (provide 'bs-init)
