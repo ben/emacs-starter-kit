@@ -94,5 +94,9 @@
                            nil
                          'fullboth)))
 
-
+(when (featurep 'ns-win)
+  (progn
+    (add-to-list 'default-frame-alist
+                 '(alpha . (95 90)))
+    (define-key global-map [(alt return)] 'mac-toggle-max-window)))
 (provide 'bs-init)
