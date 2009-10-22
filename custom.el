@@ -15,6 +15,7 @@
  '(highlight-80+-columns 100)
  '(hl-line-sticky-flag nil)
  '(indent-tabs-mode nil)
+ '(ispell-program-name "aspell")
  '(midnight-mode t nil (midnight))
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 10) ((control)))))
