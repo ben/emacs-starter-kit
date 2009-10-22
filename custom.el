@@ -4,6 +4,10 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(TeX-save-query nil)
+ '(aquamacs-additional-fontsets nil t)
+ '(aquamacs-customization-version-id 202 t)
+ '(aquamacs-save-options-on-quit nil)
+ '(aquamacs-tool-bar-user-customization nil t)
  '(c-basic-offset 3)
  '(c-default-style (quote ((c-mode . "wacom") (c++-mode . "wacom") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-ask-about-save nil)
@@ -19,6 +23,11 @@
  '(midnight-mode t nil (midnight))
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 10) ((control)))))
+ '(ns-alternate-modifier (quote meta))
+ '(ns-command-modifier (quote meta))
+ '(ns-tool-bar-display-mode nil t)
+ '(ns-tool-bar-size-mode nil t)
+ '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(perl-continued-brace-offset -3)
  '(perl-continued-statement-offset 3)
  '(perl-indent-level 3)
