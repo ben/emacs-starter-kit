@@ -27,7 +27,6 @@
  '(ns-command-modifier (quote meta))
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
- '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(perl-continued-brace-offset -3)
  '(perl-continued-statement-offset 3)
  '(perl-indent-level 3)
