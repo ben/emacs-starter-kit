@@ -103,6 +103,11 @@
                            nil
                          'fullboth)))
 
+(when (featurep 'ns-win)
+  (progn
+    (add-to-list 'default-frame-alist
+                 '(alpha . (95 90)))
+    (define-key global-map [(alt return)] 'mac-toggle-max-window)))
 
 ;;; Cursor shape/color to reflect read/write status
 ;; Shamelessly stolen from http://emacs-fu.blogspot.com/2009/12/changing-cursor-color-and-shape.html
@@ -125,5 +130,6 @@
     (set-cursor-color djcb-normal-color)
     (setq cursor-type djcb-normal-cursor-type))))
 (add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
+
 
 (provide 'bs-init)
