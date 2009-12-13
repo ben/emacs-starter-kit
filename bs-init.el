@@ -108,4 +108,12 @@
     (add-to-list 'default-frame-alist
                  '(alpha . (95 90)))
     (define-key global-map [(alt return)] 'mac-toggle-max-window)))
+
+;; Scroll behavior tweaking, inspired by
+;; http://emacs-fu.blogspot.com/2009/12/scrolling.html
+(setq
+ scroll-margin 5
+ scroll-conservatively 10000
+ scroll-preserve-screen-position 1)
+
 (provide 'bs-init)
