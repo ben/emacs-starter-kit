@@ -18,6 +18,7 @@
  '(global-hl-line-mode t)
  '(highlight-80+-columns 100)
  '(hl-line-sticky-flag nil)
+ '(ibuffer-formats (quote ((mark modified read-only " " (name 30 30 :left :elide) " " (size 9 -1 :right) " " (mode 10 10 :left :elide) "   " filename-and-process) (mark " " (name 16 -1) " " filename))))
  '(indent-tabs-mode nil)
  '(ispell-program-name "aspell")
  '(midnight-mode t nil (midnight))

@@ -138,4 +138,25 @@
     (setq cursor-type djcb-normal-cursor-type))))
 (add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
 
+;; Ibuffer grouping
+(require 'ibuffer)
+(setq ibuffer-saved-filter-groups
+      (quote (("default"      
+               ("Org" ;; all org-related buffers
+                (mode . org-mode))  
+               ("Wacom Source"
+                (filename . "/src"))
+               ("Programming" ;; prog stuff not already in MyProjectX
+                (or
+                 (mode . c-mode)
+                 (mode . perl-mode)
+                 (mode . python-mode)
+                 (mode . emacs-lisp-mode)
+                 ;; etc
+                 )) 
+               ))))
+(add-hook 'ibuffer-mode-hook
+          (lambda ()
+            (ibuffer-switch-to-saved-filter-groups "default")))
+
 (provide 'bs-init)
