@@ -31,7 +31,7 @@
 
 (setq debug-on-error t)
 
-(defvar powershell-indent 8
+(defvar powershell-indent 4
   "Amount of horizontal space to indent after, for instance, an
 opening brace")
 
