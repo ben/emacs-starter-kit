@@ -45,6 +45,8 @@
 (add-to-list 'auto-mode-alist '("\\.utf8$" . wacom-translation-database-mode))
 (add-to-list 'auto-mode-alist '("\\.dat$" . dat-mode))
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.bat$" . batch-mode))
+(add-to-list 'auto-mode-alist '("\\.cmd$" . batch-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Aesthetics
@@ -145,7 +147,7 @@
                ("Org" ;; all org-related buffers
                 (mode . org-mode))  
                ("Wacom Source"
-                (filename . "/src"))
+                (filename . "C:/src"))
                ("Programming" ;; prog stuff not already in MyProjectX
                 (or
                  (mode . c-mode)
@@ -158,5 +160,13 @@
 (add-hook 'ibuffer-mode-hook
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default")))
+
+
+
+;;; Kill-ring popup-menu
+(global-set-key "\C-cy" '(lambda ()
+                           (interactive)
+                           (popup-menu 'yank-menu)))
+
 
 (provide 'bs-init)
