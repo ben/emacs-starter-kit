@@ -2,14 +2,18 @@
 
 (defvar dat-font-lock-keywords
   (list
+   (cons "^\\(.*\\)\\(=\\)\\(.*\\)" '((1 font-lock-variable-name-face)
+                                      (2 font-lock-builtin-face)
+                                      (3 font-lock-constant-face)))
+   (cons "<.*?>" font-lock-function-name-face)
+   (cons "DONE\\|;" font-lock-builtin-face)
+   (cons "\\[.*\\]" font-lock-type-face)
+   (cons "^[^!<>;#]*$" font-lock-keyword-face)
+   (cons "^\\(<.*?>\\)*\\(.*?\\);" '((2 font-lock-keyword-face)))
    (cons "^#.*" font-lock-comment-face)
-   (cons "\\[.*\\]\\|.*DONE$" font-lock-function-name-face)
-   (cons "^.*?=\\([0-9]+;\\)?" font-lock-doc-face)
-   (list "^\\(.*?=\\([0-9]+;\\)?\\)\\([a-zA-Z0-9.\_]*?\\);"
-         '(1 font-lock-doc-face)
-         '(3 font-lock-string-face))
-   (cons "[!^].*?[!^]" font-lock-variable-name-face)
-   (cons ";" font-lock-keyword-face))
+   (cons "^\\(Command;\\)*\\(!.*?!\\)" font-lock-function-name-face)
+   (cons "\\([!^].*?[!^]\\)" '((1 font-lock-preprocessor-face)))
+   (cons "^[^;]*$" font-lock-keyword-face))
   "Rules for highlighting Wacom-style installer DAT files.")
 
 ;;;###autoload
