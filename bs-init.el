@@ -59,19 +59,10 @@
                  '(alpha . (95 90)))))
 
 
-;;; Don't quit, just hide the window
-(defun my-done ()
-  (interactive) 
-  (server-edit) 
-  (make-frame-invisible nil t)) 
-(global-set-key (kbd "C-x C-c") 'my-done)
-(global-set-key (kbd "C-x M-c") 'save-buffers-kill-terminal)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mac Emacs doesn't auto-start server-mode
-(when (eq window-system 'mac)
-  (server-start))
+(server-mode 1)
 
 
 
