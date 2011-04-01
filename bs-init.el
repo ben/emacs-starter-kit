@@ -55,8 +55,9 @@
   (progn
     (add-to-list 'default-frame-alist
                  '(font . "-outline-Consolas-normal-r-normal-normal-14-82-96-96-c-*-iso8859-1"))
-    (add-to-list 'default-frame-alist
-                 '(alpha . (95 90)))))
+    ;; (add-to-list 'default-frame-alist
+    ;;              '(alpha . (95 90)))
+    ))
 
 
 
@@ -70,7 +71,11 @@
 ;; Colors. Blackboard is unusable in a putty window.
 (require 'color-theme)
 (if (display-graphic-p)
-    (color-theme-blackboard)
+    (progn
+      (require 'color-theme-tangotango)
+      (color-theme-tangotango)
+      ;(color-theme-blackboard)
+      )
   (color-theme-zenburn))
 
 ;; Revert-buffer shortcut
