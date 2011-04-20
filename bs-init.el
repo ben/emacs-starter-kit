@@ -130,6 +130,11 @@
 
 
 
+;;; ECB setup
+(load "~/.emacs.d/elpa-to-submit/cedet-1.0/common/cedet.el" t)
+(add-to-list 'load-path "~/.emacs.d/elpa-to-submit/ecb-2.40")
+(load "ecb-autoloads.el")
+
 ;;; Kill-ring popup-menu
 (global-set-key "\C-cy" '(lambda ()
                            (interactive)
