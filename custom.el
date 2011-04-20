@@ -14,7 +14,7 @@
  '(compilation-scroll-output (quote first-error))
  '(compilation-window-height 10)
  '(compile-command "c:\\\\windows\\\\microsoft.net\\\\framework\\\\v3.5\\\\msbuild.exe /nologo /verbosity:n /p:configuration=release")
- '(fill-column 100)
+ '(fill-column 78)
  '(global-hl-line-mode t)
  '(highlight-80+-columns 100)
  '(hl-line-sticky-flag nil)
