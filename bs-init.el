@@ -13,24 +13,6 @@
   (define-key c++-mode-map (kbd "C-c C-m") 'compile-using-default-cmd))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
-;; Wacom styleguide-compliant indentation
-(defconst wacom-c-style
-  '((c-basic-offset . 3)
-    (tab-width . 3)
-    (indent-tabs-mode . t)
-    (c-comment-only-line-offset . 0)
-    (c-hanging-braces-alist . ((substatement-open before after)
-                               (defun-open before after)))
-    (c-offsets-alist . ((topmost-intro        . 0)
-                        (substatement         . +)
-                        (substatement-open    . 0)
-                        (case-label           . +)
-                        (access-label         . --)
-                        (inclass              . +)
-                        (inline-open          . 0)
-                        (statement-case-open  . 0))))
-  "Wacom styleguide indentation style")
-(c-add-style "wacom" wacom-c-style)
 
 ;; Modified regex for msbuild errors with spaces in the file name
 (if (listp 'compilation-error-regexp-alist-alist)
@@ -42,7 +24,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Auto-mode entries
 ;; Translation databases
-(add-to-list 'auto-mode-alist '("\\.utf8$" . wacom-translation-database-mode))
 (add-to-list 'auto-mode-alist '("\\.dat$" . dat-mode))
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.bat$" . batch-mode))
@@ -142,16 +123,6 @@
       (quote (("default"      
                ("Org" ;; all org-related buffers
                 (mode . org-mode))  
-               ("Wacom Source"
-                (filename . "C:/src"))
-               ("Programming" ;; prog stuff not already in MyProjectX
-                (or
-                 (mode . c-mode)
-                 (mode . perl-mode)
-                 (mode . python-mode)
-                 (mode . emacs-lisp-mode)
-                 ;; etc
-                 )) 
                ))))
 (add-hook 'ibuffer-mode-hook
           (lambda ()
