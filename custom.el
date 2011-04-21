@@ -17,7 +17,7 @@
  '(ecb-layout-name "left1")
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
- '(ecb-source-path (quote (("c:/src/mps" "MPS") ("c:" "c:") ("c:/Documents and Settings/bstraub/.emacs.d" ".emacs.d"))))
+ '(ecb-source-path (quote (("c:/src/mps" "MPS") ("c:/users/bstraub/.emacs.d" ".emacs.d"))))
  '(ecb-tip-of-the-day nil)
  '(fill-column 78)
  '(global-hl-line-mode t)
