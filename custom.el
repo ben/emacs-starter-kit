@@ -33,6 +33,7 @@
  '(ns-command-modifier (quote meta))
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
+ '(org-agenda-files (quote ("~/Documents/omse/532/wk03/todo.org" "~/Documents/omse/532/wk01/todo.org" "~/Documents/omse/532/wk02/todo.org")))
  '(perl-continued-brace-offset -3)
  '(perl-continued-statement-offset 3)
  '(perl-indent-level 3)
