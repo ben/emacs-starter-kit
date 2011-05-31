@@ -17,7 +17,7 @@
  '(ecb-layout-name "left1")
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
- '(ecb-source-path (quote (("c:/src/mps" "MPS") ("c:/users/bstraub/.emacs.d" ".emacs.d"))))
+ '(ecb-source-path (quote (("~/" "Home") "c:/src")))
  '(ecb-tip-of-the-day nil)
  '(fill-column 78)
  '(global-hl-line-mode t)
@@ -38,7 +38,8 @@
  '(perl-continued-statement-offset 3)
  '(perl-indent-level 3)
  '(sgml-basic-offset 3)
- '(tab-width 3))
+ '(tab-width 3)
+ '(truncate-lines t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

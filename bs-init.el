@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; C++ stuff
+(require 'flymake)
 
 ;; map .h to C++ mode
 (add-to-list 'auto-mode-alist
@@ -62,6 +63,7 @@
 ;; Revert-buffer shortcut
 (defun bs-revert-buffer () (interactive) (revert-buffer t t))
 (global-set-key [C-f12] 'bs-revert-buffer)
+(global-set-key [C-S-f12] 'revert-buffer-with-coding-system)
 
 ;; AucTeX init
 (if (load "auctex.el" t t t)
@@ -131,9 +133,9 @@
 
 
 ;;; ECB setup
-(load "~/.emacs.d/elpa-to-submit/cedet-1.0/common/cedet.el" t)
-(add-to-list 'load-path "~/.emacs.d/elpa-to-submit/ecb-2.40")
-(load "ecb-autoloads.el")
+;(load "~/.emacs.d/elpa-to-submit/cedet-1.0/common/cedet.el" t)
+;(add-to-list 'load-path "~/.emacs.d/elpa-to-submit/ecb-2.40")
+;(load "ecb-autoloads.el")
 
 ;;; Kill-ring popup-menu
 (global-set-key "\C-cy" '(lambda ()
